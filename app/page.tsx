@@ -1,9 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import ChatPanel from '@/components/chat/ChatPanel'
 import BrowserWindow from '@/components/browser/BrowserWindow'
-import TerminalWindow from '@/components/terminal/TerminalWindow'
+
+// Dinamik import xterm.js için
+const TerminalWindow = dynamic(() => import('@/components/terminal/TerminalWindow'), {
+  ssr: false,
+})
 
 export default function Home() {
   const [browserUrl, setBrowserUrl] = useState('https://example.com')
