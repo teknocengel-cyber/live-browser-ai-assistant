@@ -1,16 +1,6 @@
 {
-  "version": 2,
-  "buildCommand": "npm run build",
-  "outputDirectory": ".next",
-  "env": {
-    "NEXT_PUBLIC_APP_NAME": "Live Browser AI Assistant"
-  },
-  "functions": {
-    "api/**/*.ts": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/api/:path*",
