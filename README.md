@@ -127,11 +127,12 @@ Vercel otomatik olarak:
 ## 🔐 Environment Variables
 
 ```env
-# .env.local dosyası (local development için)
-# Faz 5'te kullanılacak:
-NEXT_PUBLIC_GEMINI_API_KEY=xxx
-NEXT_PUBLIC_GROQ_API_KEY=xxx
-GMAIL_API_KEY=xxx
+# .env.local dosyası (local development için) — ASLA NEXT_PUBLIC_ ile başlatmayın, anahtar tarayıcıya sızar
+OPENROUTER_API_KEY=xxx
+# İsteğe bağlı: varsayılan openrouter/auto
+OPENROUTER_MODEL=openrouter/auto
+
+# Faz 4'te kullanılacak
 RESEND_API_KEY=xxx
 ```
 
